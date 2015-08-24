@@ -1,7 +1,7 @@
 /**
  * @author Alperen
  * 
- * Draw n x n chessboard to console
+ * Draw n x n dimension chessboard to console
  * 
  */
 
