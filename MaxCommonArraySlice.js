@@ -1,5 +1,5 @@
 /**
- * @author Alperen Talaslýoðlu
+ * @author Alperen TalaslÃ½oÃ°lu
  * @date 25.08.2015
  *
  * Max Common Array Slice Implementation in Javascript
@@ -60,7 +60,7 @@ function findCommonArraySlices(array) {
 		solutions.push(solution);
 	}
 	
-	var max = getMaxCommonArraySliceLength();
+	var max = getMaxCommonArraySlice();
 	console.log(max);
 }
 
@@ -68,7 +68,7 @@ function isPreviousElementSame(solution, element) {
 	return (solution[solution.length - 1] === element);
 }
 
-function getMaxCommonArraySliceLength() {
+function getMaxCommonArraySlice() {
 	var max = 0;
 	var maxSlice = [];
 	for (var i = 0; i < solutions.length; i++) {
