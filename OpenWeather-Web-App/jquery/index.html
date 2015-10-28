@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Weather App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-select.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/spinner.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js"></script>
+</head>
+<body>
+ 
+<div class="container">
+
+  <select id="citySelect" class="selectpicker top-buffer" data-live-search="true">
+    <option value="London">London</option>
+    <option value="Luton">Luton</option>
+    <option value="Manchester">Manchester</option>
+    <option value="Birmingham">Birmingham</option>
+  </select>
+
+  <div class="panel panel-default top-buffer">
+
+    <div class="panel-heading"><span id="cityName"></span> City Weather <i id="coords"></i></div>
+
+    <div id="cityWeatherDetails" class="panel-body">
+      <div class="spinner-loader" id="loading">Loading…</div>
+      <div id="cityWeatherContent">
+          <div id="map" class="center" style="width:500px;height:380px;"></div>
+          <div class="alert alert-info top-buffer">
+            <strong><span id="cityNameHeader"></span> Current Weather!</strong> <span id="currentWeather"></span>
+          </div>
+          <div class="panel">
+            <div class="panel panel-info col-md-4">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Temp</h3>
+                </div>
+                <div class="panel-body">
+                  <p>Current Temp : <strong><span id="currentTemp"></span></strong></p>
+                  <p>Min Temp : <strong><span id="minTemp"></span></strong></p>
+                  <p>Max Temp : <strong><span id="maxTemp"></span></strong></p>
+                </div>
+            </div>
+
+            <div class="panel panel-info col-md-4">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Atmosphere</h3>
+                </div>
+                <div class="panel-body">
+                  <p>Current atmospheric pressure : <strong><span id="currentPressure"></span></strong></p>
+                </div>
+            </div>
+
+            <div class="panel panel-info col-md-4">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Humidity</h3>
+                </div>
+                <div class="panel-body">
+                  <p>Current humidity : <strong><span id="currentHumidity"></span></strong></p>
+                </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+</div>
+  <script src="js/app.js"></script>
+</body>
+</html>

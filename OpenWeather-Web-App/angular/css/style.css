@@ -1,0 +1,29 @@
+.top-buffer {
+	margin-top:20px !important;
+}
+
+.right-buffer {
+	margin-right: 20px !important;
+}
+
+.center {
+	float: none; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 0px;
+  font-size: 20px;
+  padding:5px;
+  text-overflow: '';
+  text-indent: 0.01px;
+}
+
+::-ms-expand {
+  display: none;
+}

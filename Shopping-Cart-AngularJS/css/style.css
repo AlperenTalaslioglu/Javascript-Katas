@@ -1,0 +1,28 @@
+.top-buffer {
+	margin-top:20px !important;
+}
+
+.right-buffer {
+	margin-right: 20px !important;
+}
+
+.center {
+	float: none; 
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+body {
+  padding-top: 20px;
+}
+
+#basketTable{
+  width:50%; 
+  margin-left:auto; 
+  margin-right:auto;
+  margin-top:50px;
+}
+
+.subRow{
+	color:#8b8b8b;
+}

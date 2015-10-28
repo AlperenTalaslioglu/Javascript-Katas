@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Shopping Cart Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Libs -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/spinner.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- JS Libs -->
+    <script src="js/libs/angular.min.js"></script>
+
+  </head>
+  <body ng-app="shoppingCart">
+
+
+    <div class="container" ng-controller="CartController">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h1>Your Basket</h1>
+                <p>Items you have added to your basket are shown below.</p>
+                <p>Adjust the quantities or remove items before continuing your purchase.</p>
+
+                <table class="table text-left" id="basketTable">
+                  <tr>
+                      <th width="40%">Product</th>
+                      <th>Price</th>
+                      <th>Qty</th>
+                      <th>Cost</th>
+                      <th></th>
+                  </tr>
+                  <tr ng-repeat="item in items">
+                      <td>{{item.product}}</td>
+                      <td>{{item.price | currency: "£"}}</td>
+                      <td><input type="number" ng-model="item.qty" ng-required class="input-mini" max="10" min="0"></td>
+                      <td>{{item.qty * item.price | currency: "£"}}</td>
+                      <td>
+                          <a href ng-click="removeItem($index)"><img src="img/delete.png" /></a>
+                      </td>
+                  </tr>
+                  <tr class="subRow">
+                      <td>Sub Total:</td>
+                      <td>{{calculateSubTotal() | currency: "£"}}</td>
+                  </tr>
+                  <tr class="subRow">
+                    <td>Vat @ 20%</td>
+                    <td>{{calculateSubTotal() * 0.2 | currency: "£"}}</td>
+                  </tr>
+                  <tr>
+                      <td>Total:</td>
+                      <td>{{calculateSubTotal() * 1.2 | currency: "£"}}</td>
+                  </tr>
+                </table>
+                <div>
+                  <div class="spinner-loader" ng-show="!isLoading">Loading…</div>
+                  <button class="btn btn-primary" ng-click="complete()" ng-show="isLoading">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modules -->
+    <script src="js/App.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/CartController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/PaymentService.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Libs -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/spinner.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!-- JS Libs -->
+    <script src="js/libs/angular.min.js"></script>
+
+  </head>
+  <body ng-app="weatherPicker">
+    
+    <div class="container" ng-controller="SelectController">
+
+      <div class="container">
+        <select ng-model="citySelect" ng-change="getCityWeatherData()" class="top-buffer" ng-options="opt.value as opt.label for opt in options">
+        </select>
+      </div><!-- //Select Container -->
+
+      <div class="panel panel-default top-buffer">
+
+        <div class="panel-heading">
+          {{cityName}} City Weather {{coord}}
+        </div><!-- //Panel Heading -->
+
+        <div class="panel-body">
+          <div ng-show="isLoading" class="spinner-loader">Loading…</div>
+
+          <div id="cityWeatherContent" ng-show="!isLoading">
+            
+            <div class="alert alert-info top-buffer">
+              <strong>{{cityName}} Current Weather!</strong> 
+              <img src="http://openweathermap.org/img/w/{{iconID}}.png" alt="{{imgDesc}}"/>  
+              {{weather}}
+            </div>
+            <div class="panel">
+              <div class="panel panel-info col-md-4">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Temp</h3>
+                  </div>
+                  <div class="panel-body">
+                    <p>Current Temp : <strong>{{temp}}</strong></p>
+                    <p>Min Temp : <strong>{{min}}</strong></p>
+                    <p>Max Temp : <strong>{{max}}</strong></p>
+                  </div>
+              </div>
+
+              <div class="panel panel-info col-md-4">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Atmosphere</h3>
+                  </div>
+                  <div class="panel-body">
+                    <p>Current atmospheric pressure : <strong>{{pressure}}</strong></p>
+                  </div>
+              </div>
+
+              <div class="panel panel-info col-md-4">
+                  <div class="panel-heading">
+                      <h3 class="panel-title">Humidity</h3>
+                  </div>
+                  <div class="panel-body">
+                    <p>Current humidity : <strong>{{humidity}}</strong></p>
+                  </div>
+              </div>
+          </div>
+    </div>
+
+
+
+
+
+
+        </div><!-- //Panel Body -->
+      </div><!-- //Panel -->
+    </div> <!-- //General Container -->
+
+    <!-- Modules -->
+    <script src="js/App.js"></script>
+
+    <!-- Controllers -->
+    <script src="js/controllers/SelectController.js"></script>
+
+    <!-- Services -->
+    <script src="js/services/ForecastService.js"></script>
+
+
+  </body>
+</html>
