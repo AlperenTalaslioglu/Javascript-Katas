@@ -15,8 +15,6 @@ Dependencies:
 Run: 
 Download the project and run the index.html in the root.
 
-Demo : http://alperen.me/robot-walker/
-
 In js/solver.js there is a variable which is called sizeOfGrid. When you change this variable's value, the grid automatically generated and solver trys to solve NXN grid.
 
 Tested for 2x2, 3x3, 4x4 and 5x5 grids and works well.
