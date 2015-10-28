@@ -1,0 +1,68 @@
+
+
+#content{
+	margin: auto;
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  width: 510px;
+  height: 400px;
+ 	background-color:#CACACA;
+ 	opacity: 0.9;
+ 	box-shadow: 0 0 5px;
+}
+
+#leftArrow{
+	float:left;
+  	width: 100px;
+  	height: 300px;
+  	margin: 0px;
+}
+
+#left{
+	position: relative;
+  	top: 30%;
+}
+
+#rightArrow{
+	float:left;
+  	width: 100px;
+  	height: 300px;
+  	margin: 0px;
+}
+
+#right{
+	position: relative;
+  	top: 30%;	
+}
+
+#solutionArea{
+	float:left;
+	width: 300px;
+  	height: 300px;
+  	margin: 0px;
+  	padding: 25px;
+}
+
+#solutionInfo{
+	clear:both;
+	height: 60px;
+	width: 500px;
+}
+
+#solutionCanvas{
+	width: 250px;
+	height: 250px;
+	background-color: #fff;
+  padding: 12px;
+}
+
+#solutionInfo{
+  text-align: center;
+}
+
+#numOfSolutions{
+  font-weight: 800;
+}
