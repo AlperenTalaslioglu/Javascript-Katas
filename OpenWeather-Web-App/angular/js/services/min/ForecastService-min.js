@@ -1,0 +1,1 @@
+app.factory("ForecastService",["$http",function(t){return{getWeatherData:function(e){return e?t.get("http://api.openweathermap.org/data/2.5/weather?q="+e+",uk&units=metric&appid=6b4fec3cfeb666ed226daff42cb09a95"):"Empty City Name"}}}]);
