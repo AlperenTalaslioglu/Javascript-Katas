@@ -2,6 +2,9 @@
 
 Simple AngularJS Shopping Cart Example
 
+Demo : http://alperen.pw/demo/Shopping-Cart-AngularJS/
+====================
+
 
 Dependencies:
 * Angular v1.3.5
