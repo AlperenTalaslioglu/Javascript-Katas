@@ -1,3 +1,3 @@
 # Javascript-Katas
 
-This repository is a personal play ground for self javascript katas
+This repository is a personal playground for self javascript projects and code pieces
