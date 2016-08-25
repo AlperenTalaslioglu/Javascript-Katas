@@ -58,3 +58,5 @@ function addSpace(number) {
 
 
 console.log(createMultiplicationTable(5));
+
+
