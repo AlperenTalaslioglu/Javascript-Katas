@@ -1,3 +1,12 @@
+/*
+ * Author: 
+ * Alperen Talaslıoğlu - 25.08.2016
+ * alperen.talaslioglu@gmail.com
+ *
+ * Description:
+ * 
+ *
+ */
 
 function reverseEachWord(str) {
     if (!isString(str) || str.length > 0) {return 'Invalid Input';}
