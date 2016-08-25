@@ -60,3 +60,6 @@ function isAlphabetic(str) {
 
 var sentence = 'Thousands of requests are sent out each year, and as of 2011 about 220 proposals are returned.';
 console.log(reverseEachWord(sentence));
+
+
+
