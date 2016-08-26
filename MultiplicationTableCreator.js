@@ -1,7 +1,8 @@
 /*
- * Author:
- * Alperen Talaslıoğlu - 25.08.2016
- * alperen.talaslioglu@gmail.com
+ * 
+ * @author Alperen Talaslıoğlu - 
+ * @date 26.08.2016
+ * @contact alperen.talaslioglu@gmail.com
  *
  * Description: A multiplication table creator
  *
@@ -26,6 +27,7 @@ var DEFAULT_SPACE_NUM = 5; // default space between table cells
  * @return word reversed string
  */
 function createMultiplicationTable(number) {
+    DEFAULT_SPACE_NUM = getDigitCount(number * number) + 2; // dynamically set according to input value
     var multTable = '';
     for (var i = 1; i <= number; i++) {
         multTable += addSpace(i) + i;
@@ -53,7 +55,7 @@ function getDigitCount(number) {
  * @return string consist of spaces
  */
 function addSpace(number) {
-    return '' + new Array(DEFAULT_SPACE_NUM - getDigitCount(number)).join(' ');
+    return ' '.repeat(DEFAULT_SPACE_NUM - getDigitCount(number));
 }
 
 
