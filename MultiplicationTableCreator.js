@@ -27,7 +27,7 @@ var DEFAULT_SPACE_NUM = 5; // default space between table cells
  * @return word reversed string
  */
 function createMultiplicationTable(number) {
-    DEFAULT_SPACE_NUM = getDigitCount(number * number) + 2; // dynamically set according to input value
+    DEFAULT_SPACE_NUM = getDigitCount(number * number) + 1; // dynamically set according to input value
     var multTable = '';
     for (var i = 1; i <= number; i++) {
         multTable += addSpace(i) + i;
