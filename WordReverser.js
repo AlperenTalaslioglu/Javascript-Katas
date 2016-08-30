@@ -35,7 +35,6 @@ function reverseEachWord(str) {
             wordStack.length = 0; // reset word stack
         }
     });
-
     return reversedStr;
 }
 
