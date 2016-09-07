@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Backbone Google Books SPA</title>
+    <link href="favicon.ico" type="image/x-icon" rel="icon"/>
+    <link href="assets/css/styles.min.css" rel="stylesheet"/>
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <a class="header__logo" href="#">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                Boooks Search
+            </a>
+        </div>
+    </header>
+
+    <div id="loading-indicator" class="loading">Loading&#8230;</div>
+
+    <section id="content"></section>
+
+    <!-- Libraries -->
+    <script src="assets/libs/jquery.min.js"></script>
+    <script src="assets/libs/underscore.min.js"></script>
+    <script src="assets/libs/backbone.min.js"></script>
+
+    <!-- Models -->
+    <script src="app/models/Book.js"></script>
+
+    <!-- Collections -->
+    <script src="app/collections/BooksCollection.js"></script>
+
+    <!-- Views -->
+    <script src="app/views/HomeView.js"></script>
+    <script src="app/views/BooksListView.js"></script>
+    <script src="app/views/BookDetailView.js"></script>
+
+    <!-- App Files -->
+    <script src="app/utils.js"></script>
+    <script src="app/app.js"></script>
+
+</body>
+</html>

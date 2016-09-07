@@ -1,0 +1,1 @@
+window.HomeView=Backbone.View.extend({initialize:function(){this.template=_.template(template.get("home"))},events:{"click button":"search"},search:function(){$("#search-box").val()?window.app.navigate("/books/"+template.encodeSeoUrl($("#search-box").val())+"/0/10",!0):template.throwError("Enter Some Keywords!")},render:function(){return this.$el.html(this.template()),this.el}});

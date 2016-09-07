@@ -1,0 +1,58 @@
+/* - - - - - - - - - - - - - - - -
+
+      #HOME SECTION
+
+- - - - - - - - - - - - - - - - - */
+
+.home{
+  text-align: center;
+  margin-top: 5rem;
+
+
+  .home__search-title{
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .home__search-box{
+    background-color: #2b3d51;
+    width: 80%;
+    margin: 0 auto;
+    height: 150px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 2px;
+  }
+
+  .home__search-input{
+    display: inline-block;
+    padding: 5px;
+    width: 70%;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .home__search-button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    height: 60px;
+  }
+
+  .home__search-error-box{
+    margin: 2rem auto;
+    width: 80%;
+    background-color: #da3324;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #e1e1e1;
+    border-radius: 5px;
+    font-size:16px;
+  }
+
+}

@@ -1,0 +1,20 @@
+/* - - - - - - - - - - - - - - - -
+
+      #SEARCHED BOOK LIST SECTION
+
+- - - - - - - - - - - - - - - - - */
+
+.book {
+  text-align: center;
+  margin: 3rem;
+
+  h5{
+    font-weight: 500;
+  }
+
+  .book__preview{
+    a{
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="search">
+        <h3 class="search__search-title">
+            Search Results!
+        </h3>
+        <div class="search__results-table-area">
+
+            <div class="search__result-limit">
+                Show
+                <select id="result-limit">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="40">40</option>
+                </select>
+                Books
+            </div>
+
+            <table class="search__results-table">
+                <thead>
+                <tr class="search__results-table-header-row">
+                    <th>Title</th>
+                    <th>Subtitle</th>
+                    <th>Authors</th>
+                    <th>Publication</th>
+                </tr>
+                </thead>
+                <tbody id="searchBooksListView"></tbody>
+            </table>
+
+            <ul id="pagination" class="pagination">
+            </ul>
+
+        </div>
+    </div>
+</div>

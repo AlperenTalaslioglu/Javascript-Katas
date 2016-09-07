@@ -1,0 +1,70 @@
+/* - - - - - - - - - - - - - - - -
+
+      #MIXINS
+
+- - - - - - - - - - - - - - - - - */
+
+@mixin text-overflow($overflow: ellipsis) {
+  overflow: hidden;
+  text-overflow: $overflow;
+  white-space: nowrap;
+}
+
+@mixin clearfix() {
+  display: table;
+  content: "";
+  line-height: 0;
+  clear: both;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+@mixin respond-to($media) {
+  @if $media == xsmall {
+    @media only screen and (max-width: $screen-width-s) {
+      @content;
+    }
+  }
+  @if $media == small {
+    @media only screen and (min-width: $screen-width-s) and (max-width: $screen-width-m - 1) {
+      @content
+    }
+  } @else if $media == medium {
+    @media only screen and (min-width: $screen-width-m) and (max-width: $screen-width-l - 1) {
+      @content;
+    }
+  } @else if $media == large {
+    @media only screen and (min-width: $screen-width-l) and (max-width: $screen-width-xl - 1) {
+      @content;
+    }
+  } @else if $media == xlarge {
+    @media only screen and (min-width: $screen-width-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin rounded($radius: 2px) {
+  border-radius: $radius;
+}
+
+@mixin rounded-top($radius: 5px) {
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+
+@mixin rounded-bottom($radius: 5px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin center() {
+  margin: 0 auto;
+}
+
+@mixin transparency($opacity: 0.5) {
+  opacity: $opacity;
+  -ms-filter: "progid:http://DXImageTransform.Microsoft .Alpha(Opacity = #{$opacity * 100})";
+}

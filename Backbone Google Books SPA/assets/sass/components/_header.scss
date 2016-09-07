@@ -1,0 +1,23 @@
+/* - - - - - - - - - - - - - - - -
+
+      #HEADER SECTION
+
+- - - - - - - - - - - - - - - - - */
+
+.header {
+  background-color: $color__bg--dark;
+  height: 60px;
+  box-sizing: border-box;
+
+  .header__logo {
+    height: 60px;
+    color: $color__text--secondary;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 1px;
+    line-height: 60px;
+  }
+
+}

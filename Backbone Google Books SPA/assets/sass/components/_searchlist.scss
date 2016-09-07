@@ -1,0 +1,93 @@
+/* - - - - - - - - - - - - - - - -
+
+      #SEARCHED BOOK LIST SECTION
+
+- - - - - - - - - - - - - - - - - */
+
+.search {
+  text-align: left;
+  margin: 3rem;
+  padding-bottom: 5px;
+
+  .search__search-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .search__results-table-area {
+    margin: 2rem auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .search__results-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 100;
+
+    th, td {
+      text-align: left;
+      padding: 15px;
+    }
+  }
+
+  .search__results-table-header-row {
+    font-size: 12px;
+
+    th {
+      background-color: #2b3d51;
+      color: white;
+    }
+  }
+
+  .search__results-table-body-row {
+    height: 40px;
+    font-size: 12px;
+    &:nth-child(even) {
+      background-color: #f2f2f2
+    }
+    &:nth-child(odd) {
+      background-color: #e3e7ea
+    }
+  }
+
+  .search__result-book-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #2b3d51;
+  }
+
+  .search__result-limit {
+    text-align: right;
+    margin: 10px;
+  }
+
+  .ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul.pagination li {
+    display: inline;
+  }
+
+  ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+
+  ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  ul.pagination li a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+}
